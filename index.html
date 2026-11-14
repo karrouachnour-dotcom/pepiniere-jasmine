@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Pépinière Jasmine | Plantes, arbres et fruitiers à Aïn Tizgha</title>
+<meta name="description" content="Pépinière Jasmine à Aïn Tizgha, Benslimane : plus de 40 ans d’expertise. Catalogue de plantes et espace professionnels pour paysagistes, agriculteurs et entreprises.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script src="https://cdn.tailwindcss.com/3.4.17"></script>
+<script>
+tailwind.config = { theme: { extend: {
+  colors: { forest: '#0F2D1F', pine: '#1F4D36', fern: '#6E947A', mist: '#EEF2EA', linen: '#FAF9F5' },
+  fontFamily: { display: ['"Playfair Display"', 'Georgia', 'serif'], sans: ['Montserrat', 'system-ui', 'sans-serif'] }
+} } };
+</script>
+<style>
+  /* Image d'accueil : pointe vers votre dossier local */
+  .hero-bg { background-image: url('images/hero.jpg'); background-size: cover; background-position: center; }
+  .hero-title { text-shadow: 0 4px 40px rgba(0,0,0,.4); }
+  section[id], footer[id] { scroll-margin-top: 4.5rem; }
+  [hidden] { display: none !important; }
+  .chip { border-radius: 9999px; padding: .7rem 1.4rem; font-size: .875rem; font-weight: 500; color: #0F2D1F; background: #fff; box-shadow: 0 1px 3px rgba(0,0,0,.06); cursor: pointer; transition: background .25s, color .25s, box-shadow .25s; }
+  .chip:hover { box-shadow: 0 8px 20px rgba(15,45,31,.12); }
+  .chip[aria-pressed="true"] { background: #0F2D1F; color: #fff; box-shadow: 0 10px 24px rgba(15,45,31,.25); }
+  .field { width: 100%; border: 0; border-radius: .875rem; background: #F1F4EE; padding: .95rem 1.15rem; font: inherit; color: #0F2D1F; }
+  .field::placeholder { color: rgba(15,45,31,.45); }
+  a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible { outline: 2px solid #6E947A; outline-offset: 3px; }
+  .rise { opacity: 0; animation: rise 1s cubic-bezier(.2,.7,.2,1) forwards; }
+  .pop { animation: pop .4s ease both; }
+  @keyframes rise { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: none; } }
+  @keyframes pop { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+  @media (prefers-reduced-motion: reduce) { .rise, .pop { animation: none; opacity: 1; } }
+</style>
+</head>
+<body class="bg-linen font-sans text-forest antialiased">
+
+<header class="sticky top-0 z-50 h-[72px] border-b border-white/40 bg-white/70 shadow-lg shadow-black/5 backdrop-blur-md">
+  <div class="mx-auto flex h-full max-w-6xl items-center justify-between px-6">
+    <a href="#accueil" class="flex items-center gap-2.5 font-display text-xl font-semibold">
+      <svg class="h-6 w-6 text-pine" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15Z"/><path d="M5 19 14 10"/></svg>
+      Pépinière Jasmine
+    </a>
+    <nav id="menu" aria-label="Navigation principale" class="absolute inset-x-4 top-full mt-2 hidden flex-col gap-5 rounded-2xl bg-white/95 p-7 text-sm font-medium shadow-xl shadow-black/10 md:static md:mt-0 md:flex md:flex-row md:gap-10 md:rounded-none md:bg-transparent md:p-0 md:shadow-none">
+      <a href="#accueil" class="text-forest/75 hover:text-forest">Accueil</a>
+      <a href="#histoire" class="text-forest/75 hover:text-forest">Notre histoire</a>
+      <a href="#catalogue" class="text-forest/75 hover:text-forest">Catalogue</a>
+      <a href="#b2b" class="text-forest/75 hover:text-forest">Espace B2B</a>
+      <a href="#contact" class="text-forest/75 hover:text-forest">Contact</a>
+    </nav>
+    <button id="burger" type="button" aria-label="Ouvrir le menu" aria-expanded="false" aria-controls="menu" class="rounded-full p-2 md:hidden">
+      <svg class="h-6 w-6" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+    </button>
+  </div>
+</header>
+
+<main>
+<section id="accueil" class="hero-bg relative -mt-[72px] flex min-h-[100svh] items-center justify-center px-6 pt-[72px] text-center text-white">
+  <div class="absolute inset-0 bg-gradient-to-b from-black/55 via-black/35 to-black/65" aria-hidden="true"></div>
+  <div class="relative mx-auto max-w-5xl py-24">
+    <h1 class="hero-title rise text-balance font-display text-6xl font-medium leading-[1.02] tracking-tight text-white sm:text-7xl md:text-8xl">Pépinière Jasmine</h1>
+    <p class="rise mx-auto mt-8 max-w-2xl text-base font-light tracking-wide text-white/90 sm:text-xl" style="animation-delay:.25s">Plus de 40 ans d’expertise agricole et de passion</p>
+    <div class="rise mt-12 flex flex-col items-center justify-center gap-4 sm:flex-row" style="animation-delay:.5s">
+      <a href="#catalogue" class="rounded-full bg-white px-9 py-4 text-sm font-semibold text-forest shadow-xl shadow-black/20 transition hover:bg-mist">Découvrir nos plantes</a>
+      <a href="#b2b" class="rounded-full border border-white/50 bg-white/10 px-9 py-4 text-sm font-semibold text-white backdrop-blur-sm transition hover:bg-white/20">Espace B2B</a>
+    </div>
+  </div>
+</section>
+
+<section id="histoire" class="py-28 sm:py-36">
+  <div class="mx-auto grid max-w-6xl items-center gap-16 px-6 lg:grid-cols-2 lg:gap-24">
+    <div>
+      <h2 class="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">Une pépinière de famille, enracinée à Aïn Tizgha</h2>
+      <p class="mt-8 max-w-prose leading-8 text-forest/75">Depuis plus de 40 ans, la famille Karrouach cultive, sélectionne et conseille à Aïn Tizgha, près de Benslimane. Notre domaine rassemble arbres, palmiers, fleurs, arbustes et fruitiers adaptés au climat marocain.</p>
+      <p class="mt-5 max-w-prose leading-8 text-forest/75">Particuliers, paysagistes, agriculteurs ou entreprises : nous vous aidons à choisir la bonne plante pour le bon endroit, du pied unique aux grandes quantités.</p>
+      <a href="#catalogue" class="mt-10 inline-block rounded-full bg-forest px-9 py-4 text-sm font-semibold text-white shadow-lg shadow-forest/25 transition hover:bg-pine">Parcourir le catalogue</a>
+    </div>
+    <div class="relative isolate">
+      <div class="absolute -bottom-6 -left-4 -z-10 h-56 w-56 rounded-full bg-mist" aria-hidden="true"></div>
+      <img src="images/histoire.jpg" alt="Le domaine de la Pépinière Jasmine à Aïn Tizgha" width="800" height="1000" loading="lazy" class="aspect-[4/5] w-full rounded-3xl object-cover shadow-2xl shadow-black/10">
+    </div>
+  </div>
+</section>
+
+<section id="catalogue" class="bg-mist py-28 sm:py-36">
+  <div class="mx-auto max-w-6xl px-6">
+    <div class="text-center">
+      <h2 class="font-display text-4xl font-medium tracking-tight sm:text-5xl">Le catalogue végétal</h2>
+      <p class="mx-auto mt-6 max-w-xl leading-8 text-forest/70">Un aperçu de notre gamme, sans vente en ligne. Les disponibilités varient selon la saison : contactez-nous avant de vous déplacer.</p>
+    </div>
+
+    <div class="mt-14 flex flex-wrap justify-center gap-3" role="group" aria-label="Filtrer par catégorie">
+      <button type="button" class="chip" data-filter="all" aria-pressed="true">Tout</button>
+      <button type="button" class="chip" data-filter="arbres" aria-pressed="false">Arbres &amp; Palmiers</button>
+      <button type="button" class="chip" data-filter="fleurs" aria-pressed="false">Fleurs &amp; Ornements</button>
+      <button type="button" class="chip" data-filter="arbustes" aria-pressed="false">Arbustes &amp; Succulentes</button>
+      <button type="button" class="chip" data-filter="fruitiers" aria-pressed="false">Arbres Fruitiers</button>
+    </div>
+    <p id="count" class="mt-8 text-center text-sm text-forest/60" aria-live="polite"></p>
+
+    <div id="grid" class="mt-10 grid grid-cols-2 gap-5 sm:gap-8 lg:grid-cols-3 lg:gap-10 xl:grid-cols-4"></div>
+  </div>
+</section>
+
+<section id="b2b" class="px-4 py-24 sm:px-6 sm:py-32">
+  <div class="mx-auto grid max-w-6xl items-center gap-14 rounded-[2.5rem] bg-forest p-8 text-white shadow-2xl shadow-forest/30 sm:p-14 lg:grid-cols-2 lg:gap-20 lg:p-20">
+    <div>
+      <h2 class="font-display text-4xl font-medium leading-tight tracking-tight sm:text-5xl">Espace B2B : paysagistes, agriculteurs et entreprises</h2>
+      <p class="mt-8 leading-8 text-white/75">Achats en gros, aménagements paysagers, plantations agricoles : profitez de plus de 40 ans d’expertise et d’un interlocuteur unique pour vos chantiers.</p>
+      <ul class="mt-10 space-y-7">
+        <li class="flex gap-4"><span class="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10"><svg class="h-4 w-4 text-fern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><div><h3 class="font-display text-xl">Achats en gros</h3><p class="mt-1 text-sm leading-7 text-white/70">Quantités importantes d’arbres, palmiers, arbustes et fruitiers.</p></div></li>
+        <li class="flex gap-4"><span class="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10"><svg class="h-4 w-4 text-fern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><div><h3 class="font-display text-xl">Aménagements paysagers</h3><p class="mt-1 text-sm leading-7 text-white/70">Conseil sur le choix des essences pour vos espaces verts.</p></div></li>
+        <li class="flex gap-4"><span class="mt-1 flex h-9 w-9 shrink-0 items-center justify-center rounded-full bg-white/10"><svg class="h-4 w-4 text-fern" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m5 12 5 5 9-10"/></svg></span><div><h3 class="font-display text-xl">Plantations agricoles</h3><p class="mt-1 text-sm leading-7 text-white/70">Fruitiers et arbres adaptés à votre exploitation.</p></div></li>
+      </ul>
+    </div>
+
+    <form action="#" method="post" class="space-y-6 rounded-3xl bg-white p-8 text-forest shadow-2xl shadow-black/20 sm:p-10">
+      <h3 class="font-display text-2xl font-medium">Parlez-nous de votre projet</h3>
+      <div><label for="nom" class="mb-2 block text-sm font-medium">Nom</label><input class="field" id="nom" name="nom" type="text" autocomplete="name" required></div>
+      <div><label for="entreprise" class="mb-2 block text-sm font-medium">Entreprise</label><input class="field" id="entreprise" name="entreprise" type="text" autocomplete="organization"></div>
+      <div><label for="telephone" class="mb-2 block text-sm font-medium">Téléphone</label><input class="field" id="telephone" name="telephone" type="tel" autocomplete="tel" required></div>
+      <div><label for="besoin" class="mb-2 block text-sm font-medium">Besoin</label><textarea class="field" id="besoin" name="besoin" rows="4" placeholder="Types de plantes, quantités, calendrier du chantier…" required></textarea></div>
+      <button type="submit" class="w-full rounded-full bg-forest px-9 py-4 text-sm font-semibold text-white shadow-lg shadow-forest/25 transition hover:bg-pine">Envoyer ma demande</button>
+    </form>
+  </div>
+</section>
+</main>
+
+<footer id="contact" class="bg-[#08190F] py-16 text-white/75">
+  <div class="mx-auto grid max-w-6xl gap-12 px-6 md:grid-cols-3">
+    <div>
+      <p class="font-display text-2xl font-medium text-white">Pépinière Jasmine</p>
+      <p class="mt-4 max-w-xs text-sm leading-7 text-white/60">Plus de 40 ans d’expertise agricole et de passion.</p>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-white">Adresse</h3>
+      <p class="mt-4 text-sm">Aïn Tizgha, Benslimane</p>
+      <a href="https://www.google.com/maps/search/?api=1&query=MW8G%2B62R+A%C3%AFn+Tizgha" target="_blank" rel="noopener" class="mt-2 inline-block text-sm text-fern underline underline-offset-4 hover:text-white">Voir sur la carte</a>
+    </div>
+    <div>
+      <h3 class="font-display text-lg text-white">Contacts</h3>
+      <p class="mt-4 text-sm"><a href="tel:+212662323815" class="hover:text-white">06 62 32 38 15</a></p>
+      <p class="mt-2 text-sm"><a href="https://www.instagram.com/theplantspotjasmine" target="_blank" rel="noopener" class="text-fern underline underline-offset-4 hover:text-white">Instagram : @theplantspotjasmine</a></p>
+    </div>
+  </div>
+  <p class="mx-auto mt-14 max-w-6xl border-t border-white/10 px-6 pt-6 text-xs text-white/50">© <span id="year"></span> Pépinière Jasmine. Tous droits réservés.</p>
+</footer>
+
+<script>
+const CATS = {
+  arbres:    { label: 'Arbres & Palmiers',      bg: '1F4D36', items: ['Palmier Phoenix', 'Cyprès', 'Ficus', 'Brachychiton'] },
+  fleurs:    { label: 'Fleurs & Ornements',     bg: '6E947A', items: ['Bougainvillier', 'Hibiscus', 'Strelitzia', 'Callistemon', 'Tecoma'] },
+  arbustes:  { label: 'Arbustes & Succulentes', bg: '3F6B5A', items: ['Fusain vert panaché jaune', 'Schefflera', 'Duranta', 'Agave', 'Plantes grasses'] },
+  fruitiers: { label: 'Arbres Fruitiers',       bg: '8C7A66', items: ['Pommier', 'Poirier', 'Figuier', 'Vigne', 'Olivier', 'Abricotier', 'Prunier', 'Cognassier', 'Nectarinier', 'Artichaut'] }
+};
+
+const IMAGES = {
+  "Palmier Phoenix": "images/palmier.jpg",
+  "Cyprès": "images/cypres.jpg",
+  "Ficus": "https://commons.wikimedia.org/wiki/Special:FilePath/Ficus_benjamina.jpg?width=600",
+  "Brachychiton": "https://commons.wikimedia.org/wiki/Special:FilePath/Brachychiton_populneus.jpg?width=600",
+  "Bougainvillier": "https://commons.wikimedia.org/wiki/Special:FilePath/Bougainvillea_spectabilis_flower.jpg?width=600",
+  "Hibiscus": "https://commons.wikimedia.org/wiki/Special:FilePath/China_rose_flower.jpg?width=600",
+  "Strelitzia": "https://commons.wikimedia.org/wiki/Special:FilePath/Bird_of_Paradise_-_Flower.jpg?width=600",
+  "Callistemon": "https://commons.wikimedia.org/wiki/Special:FilePath/Callistemon_citrinus_RJB.jpg?width=600",
+  "Tecoma": "https://commons.wikimedia.org/wiki/Special:FilePath/Tecoma_stans_01.jpg?width=600",
+  "Fusain vert panaché jaune": "https://commons.wikimedia.org/wiki/Special:FilePath/Euonymus_japonicus_cv._Aurea-marginatus-IMG_20170924_092359.jpg?width=600",
+  "Schefflera": "https://commons.wikimedia.org/wiki/Special:FilePath/Schefflera_arboricola.JPG?width=600",
+  "Duranta": "https://commons.wikimedia.org/wiki/Special:FilePath/Duranta_erecta_001.jpg?width=600",
+  "Agave": "https://commons.wikimedia.org/wiki/Special:FilePath/Agave_americana_plant.jpg?width=600",
+  "Plantes grasses": "https://commons.wikimedia.org/wiki/Special:FilePath/Echeveria_secunda_a2.jpg?width=600",
+  "Pommier": "https://commons.wikimedia.org/wiki/Special:FilePath/Apples_on_tree_2011_G1.jpg?width=600",
+  "Poirier": "https://commons.wikimedia.org/wiki/Special:FilePath/Birnenbaum.jpg?width=600",
+  "Figuier": "https://commons.wikimedia.org/wiki/Special:FilePath/Common_fig.jpg?width=600",
+  "Vigne": "https://commons.wikimedia.org/wiki/Special:FilePath/Vitis_vinifera_001.jpg?width=600",
+  "Olivier": "https://commons.wikimedia.org/wiki/Special:FilePath/Olea_europaea_002.JPG?width=600",
+  "Abricotier": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23e8efe6'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='26' fill='%232f5233' text-anchor='middle' dominant-baseline='middle'>Abricotier — Pépinière Jasmine</text></svg>",
+  "Prunier": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23e8efe6'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='26' fill='%232f5233' text-anchor='middle' dominant-baseline='middle'>Prunier — Pépinière Jasmine</text></svg>",
+  "Cognassier": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23e8efe6'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='26' fill='%232f5233' text-anchor='middle' dominant-baseline='middle'>Cognassier — Pépinière Jasmine</text></svg>",
+  "Nectarinier": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23e8efe6'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='26' fill='%232f5233' text-anchor='middle' dominant-baseline='middle'>Nectarinier — Pépinière Jasmine</text></svg>",
+  "Artichaut": "data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='600' height='400'><rect width='100%25' height='100%25' fill='%23e8efe6'/><text x='50%25' y='50%25' font-family='sans-serif' font-size='26' fill='%232f5233' text-anchor='middle' dominant-baseline='middle'>Artichaut — Pépinière Jasmine</text></svg>"
+};
+const ph = (n, c) => `https://placehold.co/600x750/${c.bg}/FFFFFF?text=${encodeURIComponent(n).replace(/%20/g, '+')}`;
+const grid = document.getElementById('grid');
+const count = document.getElementById('count');
+const chips = document.querySelectorAll('[data-filter]');
+
+grid.innerHTML = Object.entries(CATS).flatMap(([key, c]) => c.items.map(n => `
+  <article data-cat="${key}" class="overflow-hidden rounded-2xl bg-white shadow-xl shadow-black/5">
+    <img src="${IMAGES[n] || ph(n, c)}" alt="${n}" width="600" height="750" loading="lazy" class="aspect-[4/5] w-full object-cover">
+    <div class="p-4 sm:p-6">
+      <h3 class="font-display text-lg font-medium leading-snug sm:text-xl">${n}</h3>
+      <span class="mt-3 inline-block rounded-full bg-mist px-3 py-1 text-xs font-medium text-pine">${c.label}</span>
+    </div>
+  </article>`)).join('');
+
+function applyFilter(f) {
+  let n = 0;
+  chips.forEach(b => b.setAttribute('aria-pressed', b.dataset.filter === f));
+  grid.querySelectorAll('article').forEach(card => {
+    const show = f === 'all' || card.dataset.cat === f;
+    card.hidden = !show;
+    if (show) { n++; card.classList.remove('pop'); void card.offsetWidth; card.classList.add('pop'); }
+  });
+  count.textContent = n + (n > 1 ? ' plantes' : ' plante');
+}
+chips.forEach(b => b.addEventListener('click', () => applyFilter(b.dataset.filter)));
+applyFilter('all');
+
+const menu = document.getElementById('menu');
+const burger = document.getElementById('burger');
+function setMenu(open) {
+  menu.classList.toggle('hidden', !open);
+  menu.classList.toggle('flex', open);
+  burger.setAttribute('aria-expanded', open);
+}
+burger.addEventListener('click', () => setMenu(burger.getAttribute('aria-expanded') !== 'true'));
+
+const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+document.querySelectorAll('a[href^="#"]').forEach(a => {
+  a.addEventListener('click', e => {
+    const target = document.querySelector(a.getAttribute('href'));
+    if (!target) return;
+    e.preventDefault();
+    target.scrollIntoView({ behavior: reduceMotion ? 'auto' : 'smooth', block: 'start' });
+    history.replaceState(null, '', a.getAttribute('href'));
+    setMenu(false);
+  });
+});
+
+document.getElementById('year').textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
